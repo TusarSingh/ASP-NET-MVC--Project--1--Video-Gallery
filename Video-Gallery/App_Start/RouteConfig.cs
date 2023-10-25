@@ -18,7 +18,7 @@ namespace Vidly
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Movies", action = "Rain", id = UrlParameter.Optional }
+                defaults: new { controller = "Movies", action = "Random", id = UrlParameter.Optional }
             );
         }
     }
