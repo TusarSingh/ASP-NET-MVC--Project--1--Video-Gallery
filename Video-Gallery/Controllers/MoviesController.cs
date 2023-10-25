@@ -16,7 +16,7 @@ namespace Vidly.Controllers
         {
             var movie = new Movie() { Name = "Tarun" };
 
-            var customer = new List<Customer>
+            var customers = new List<Customer>
             {
                 new Customer {Name = "Customer 1"},
                 new Customer {Name = "Customer 2"}
@@ -24,11 +24,12 @@ namespace Vidly.Controllers
 
             var viewModel = new RandomMovieViewModel
             {
-                Movies = movie,
-                Customers = customer
+                Movie = movie,
+                Customers = customers
             };
 
             return View(viewModel);
+
         }
 
     }
