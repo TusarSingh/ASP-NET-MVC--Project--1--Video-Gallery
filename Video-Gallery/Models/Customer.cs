@@ -11,7 +11,5 @@ namespace Vidly.Models
 
         public string Name { get; set; }
 
-
-
     }
 }
