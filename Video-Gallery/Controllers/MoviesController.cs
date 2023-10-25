@@ -17,21 +17,25 @@ namespace Vidly.Controllers
 
             return View(movie);
 
-        }
+           }
 
-        public ActionResult ByReleaseDate(int? Year, int Month)
+
+
+        public ActionResult Rain()
         {
-            return Content(Year + "/" + Month);
+            var mo = new Movie() { Name = "Tusar" };
+
+            ViewData["Yes"] = mo;
+
+            ViewBag.yes = mo;
+
+            //var viewResult = new ViewResult();
+            //viewResult.ViewData.Model
+
+            return View(mo);
+            //return View();
+
         }
-
-
-        [Route("movies/released/{year}/{month:regex(\\d{4}):range(1,12)}")]
-        public ActionResult ByReleaseMonth(int? Year, int? Month)
-        {
-            return Content(Year + "/" + Month);
-        }
-
-        // /{month:regex(\\d{4}):range(1,12)}
 
     }
 }
