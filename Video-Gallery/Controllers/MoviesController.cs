@@ -11,74 +11,29 @@ namespace Vidly.Controllers
     public class MoviesController : Controller
     {
         // GET: Movies
-        public ActionResult Index()
+        public ActionResult Random()
         {
             var movie = new Movie() { Name = "Tarun" };
 
             return View(movie);
         }
 
-        public ViewResult Index1()
+        public ActionResult Edit(int Id)
         {
-            var movie = new Movie() { Name = "Tarun" };
-
-            return View(movie);
+            return Content("ID No = " + Id);
         }
 
-        public ContentResult Index2()
+        public ActionResult Index(int? pId, string pName)
         {
-            var movie = new Movie() { Name = "Tarun" };
 
-            return Content("Hello MR.");
+            if (!pId.HasValue)
+                pId = 1;
+
+            if (string.IsNullOrWhiteSpace(pName))
+                pName = "Tarun";
+
+
+            return Content(string.Format("PageIndex = {0} & sortBy = {1}", pId, pName));
         }
-
-        public HttpNotFoundResult Index3()
-        {
-            var movie = new Movie() { Name = "Tarun" };
-
-            return HttpNotFound();
-        }
-
-        public EmptyResult Index4()
-        {
-            var movie = new Movie() { Name = "Tarun" };
-
-            return new EmptyResult();
-        }
-
-        public RedirectToRouteResult Index5()
-        {
-            var movie = new Movie() { Name = "Tarun" };
-
-            return RedirectToAction("Index", "Home", new { page = 1, shortby = "Tusar" });
-        }
-
-        public PartialViewResult Index6()
-        {
-            var movie = new Movie() { Name = "Tarun" };
-
-            return PartialView(movie);
-        }
-
-        public RedirectResult Index7()
-        {
-            var movie = new Movie() { Name = "Tarun" };
-
-            return Redirect("/Home/Index");
-        }
-
-        public JsonResult Index8()
-        {
-            var movie = new Movie() { Name = "Tarun" };
-
-            return Json(movie);
-        }
-
-        //public FileResult Index9()
-        //{
-        //    var movie = new Movie() { Name = "Tusar"}
-
-        //    return File();
-        //}
     }
 }
