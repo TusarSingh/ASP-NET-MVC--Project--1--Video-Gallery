@@ -18,22 +18,15 @@ namespace Vidly.Controllers
             return View(movie);
         }
 
-        public ActionResult Edit(int Id)
+
+        public ActionResult ByReleaseDate(int? Year,int? Month)
         {
-            return Content("ID No = " + Id);
+            return Content(Year + "/" + Month);
         }
 
-        public ActionResult Index(int? pId, string pName)
-        {
-
-            if (!pId.HasValue)
-                pId = 1;
-
-            if (string.IsNullOrWhiteSpace(pName))
-                pName = "Tarun";
 
 
-            return Content(string.Format("PageIndex = {0} & sortBy = {1}", pId, pName));
-        }
+          //--http://localhost:62955/movies/ByReleaseDate/?year=2020&Month=05
+
     }
 }
