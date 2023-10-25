@@ -16,17 +16,22 @@ namespace Vidly.Controllers
             var movie = new Movie() { Name = "Tarun" };
 
             return View(movie);
+
         }
 
-
-        public ActionResult ByReleaseDate(int? Year,int? Month)
+        public ActionResult ByReleaseDate(int? Year, int Month)
         {
             return Content(Year + "/" + Month);
         }
 
 
+        [Route("movies/released/{year}/{month:regex(\\d{4}):range(1,12)}")]
+        public ActionResult ByReleaseMonth(int? Year, int? Month)
+        {
+            return Content(Year + "/" + Month);
+        }
 
-          //--http://localhost:62955/movies/ByReleaseDate/?year=2020&Month=05
+        // /{month:regex(\\d{4}):range(1,12)}
 
     }
 }
