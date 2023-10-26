@@ -43,6 +43,11 @@ namespace Vidly.Controllers
         }
 
 
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            return View();
+        }
 
         // GET: Customers
         public ActionResult Index()
