@@ -22,6 +22,5 @@ namespace Vidly.Models
 
         public DateTime BirthOfDate { get; set; }
 
-
     }
 }

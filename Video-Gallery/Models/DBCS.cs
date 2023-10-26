@@ -15,6 +15,6 @@ namespace Vidly.Models
 
         public DbSet<MembershipType> MembershipTypes { get; set; }
 
-       
+
     }
 }

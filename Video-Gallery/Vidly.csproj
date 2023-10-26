@@ -133,15 +133,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202309141446004_Movie.cs" />
-    <Compile Include="Migrations\202309141446004_Movie.designer.cs">
-      <DependentUpon>202309141446004_Movie.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202309141449160_Movie_Add_Some_Propertie.cs" />
-    <Compile Include="Migrations\202309141449160_Movie_Add_Some_Propertie.designer.cs">
-      <DependentUpon>202309141449160_Movie_Add_Some_Propertie.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DBCS.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -187,6 +178,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Navbar.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Customers\New.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Random.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
@@ -206,14 +198,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202309141446004_Movie.resx">
-      <DependentUpon>202309141446004_Movie.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202309141449160_Movie_Add_Some_Propertie.resx">
-      <DependentUpon>202309141449160_Movie_Add_Some_Propertie.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

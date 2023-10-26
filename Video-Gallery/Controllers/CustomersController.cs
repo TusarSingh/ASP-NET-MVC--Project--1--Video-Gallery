@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 using Vidly.Models;
 using System.Data.Entity;
+using System.Web;
 
 
 
@@ -14,12 +15,12 @@ namespace Vidly.Controllers
     public class CustomersController : Controller
     {
 
-       
+        //private ApplicationDbContext _context;
         private DBCS _context;
 
         public CustomersController()
         {
-       
+            //_context = new ApplicationDbContext();
             _context = new DBCS();
         }
 
@@ -28,6 +29,11 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
 
+
+        public ActionResult New()
+        {
+            return View();
+        }   
 
 
 

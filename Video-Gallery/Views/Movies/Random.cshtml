@@ -1,4 +1,64 @@
-﻿@model IEnumerable<Vidly.Models.Movie>
+﻿@*@model IEnumerable<Vidly.Models.Movie>
+
+    @{
+        ViewBag.Title = "Random";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <h2>Random</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReleasedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfStock)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleasedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfStock)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            </td>
+        </tr>
+    }
+
+    </table>*@
+
+
+@model IEnumerable<Vidly.Models.Movie>
 
 
 @{
@@ -11,12 +71,40 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieDetailTypeID)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieDetailTypeID)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            </td>
+        </tr>
+    }
+
+    </table>*@
 
 
 @{
     if (!Model.Any())
     {
-    <p>We don't have any Movies yet.'</p>
+        <p>We don't have any Movies yet.'</p>
     }
     else
     {
@@ -31,9 +119,9 @@
                 @foreach (var movie in Model)
                 {
                     <tr>
-                        
+
                         <td>
-                            @Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.ID },null)
+                            @Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.ID }, null)
                         </td>
                         <td>@movie.MovieType</td>
                     </tr>
@@ -42,3 +130,4 @@
         </table>
     }
 }
+
