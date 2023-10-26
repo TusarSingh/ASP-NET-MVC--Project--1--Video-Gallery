@@ -11,36 +11,50 @@
     <h4>Customer</h4>
     <hr />
     <dl class="dl-horizontal">
+
         @*<dt>
-            @Html.DisplayNameFor(model => model.MembershipType.Id)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MembershipType.Id)
-        </dd>*@
-
-        <dt>
             @Html.DisplayNameFor(model => model.ID)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.ID)
-        </dd>
-
-        <dt>
+        </dd>*@
+        <h1>
+            @*<dt>
             @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
+        </dt>*@
+            <dt>
             @Html.DisplayFor(model => model.Name)
-        </dd>
+            </dt>
+            <dd>
 
-        <dt>
+            </dd>
+
+            @*<dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>*@
+        </h1>
+        @*<dt>
             @Html.DisplayNameFor(model => model.IsSubscribedToNewsletter)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.IsSubscribedToNewsletter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>*@
+            
+        <dt>
+            @Html.DisplayNameFor(model => model.MembershipType.Name) :
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MembershipType.Name)
         </dd>
 
     </dl>
