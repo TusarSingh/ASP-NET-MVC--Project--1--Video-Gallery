@@ -37,7 +37,7 @@
             $("#customers").DataTable({
                 ajax: {
                     url: "/api/customers",
-                    dataSrc:""
+                    dataSrc: ""
                 },
                 columns: [
                     {
@@ -47,7 +47,7 @@
                         }
                     },
                     {
-                        data: "name"
+                        data: "membershipType.name"
                     },
                     {
                         data: "id",
@@ -60,34 +60,6 @@
 
             });
 
-            //$("#customers").on("click", ".js-delete", function () {
-
-            //    var button = $(this);
-
-            //    //bootbox.confirm("Are you sure you want to delete this customer?", function (result) {
-            //    //    if (result) {
-            //    //        $.ajax({
-            //    //            url: "/api/customers/" + $(this).attr("data-customer-id"),
-            //    //            method: "DELETE",
-            //    //            success: function () {
-            //    //                //console.log("Success");
-            //    //                button.parents("tr").remove();
-            //    //            }
-            //    //        });
-            //    //    }
-            //    //});
-
-            //    if (confirm("Are you suru you want to delete this customer?")) {
-            //        $.ajax({
-            //            url: "/api/customers/" + $(this).attr("data-customer-id"),
-            //            method: "DELETE",
-            //            success: function () {
-            //                //console.log("Success");
-            //                button.parents("tr").remove();
-            //            }
-            //        });   
-            //    }
-            //});
         });
     </script>    
 }
