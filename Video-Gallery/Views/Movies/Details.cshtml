@@ -19,46 +19,12 @@
                 @Html.DisplayFor(model => model.Name)
             </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MovieType)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.MovieType)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.ReleasedDate)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.ReleasedDate)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.AddDate)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.AddDate)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.NumberOfStock)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.NumberOfStock)
-            </dd>
-
         </dl>
     </div>
     <p>
         @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
         @Html.ActionLink("Back to List", "Index")
     </p>*@
-
-
 
 
 @model Vidly.Models.Movie
@@ -117,7 +83,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) 
-    @Html.ActionLink("Back to List", "Random","Movies")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Random")
 </p>
-
