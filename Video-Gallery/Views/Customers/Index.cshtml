@@ -12,7 +12,6 @@
     @Html.ActionLink("Create New", "New")
 </p>
 <table class="table">
-   
 </table>
 
 <h2>Customers</h2>
@@ -31,16 +30,16 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach(var customer in Model)
+                @foreach (var customer in Model)
                 {
                     <tr>
                         <td>
-                            @Html.ActionLink(customer.Name,"Details","Customers",new { id=customer.ID},null)
+                            @Html.ActionLink(customer.Name, "Details", "Customers", new { id = customer.ID }, null)
                         </td>
                         <td>@customer.MembershipType.Name</td>
                     </tr>
                 }
-            </tbody>  
+            </tbody>
         </table>
     }
 }

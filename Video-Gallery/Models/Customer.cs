@@ -18,6 +18,7 @@ namespace Vidly.Models
 
         public MembershipType MembershipType { get; set; }
 
+        [Display(Name = "MemberShip Type")]
         public byte MembershipTypeId { get; set; }
 
         [Display(Name = "Date Of Birth")]
