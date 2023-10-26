@@ -39,7 +39,7 @@ namespace Vidly.Controllers
                 MembershipTypes = membershipTypes
             };
 
-            return View(viewmodel);
+            return View("CustomerForm",viewmodel);
         }
 
 
@@ -49,7 +49,7 @@ namespace Vidly.Controllers
             _context.Customers.Add(customer);
             _context.SaveChanges();
 
-            return RedirectToAction("Index","Customers");
+            return RedirectToAction("Index", "Customers");
         }
 
         // GET: Customers
@@ -74,6 +74,23 @@ namespace Vidly.Controllers
                 return HttpNotFound();
 
             return View(customer);
+        }
+
+
+        public ActionResult Edit(int id)
+        {
+            var customer = _context.Customers.SingleOrDefault(x => x.ID == id);
+
+            if (customer == null)
+                return HttpNotFound();
+
+            var viewdata = new NewCustomerViewModel
+            {
+                Customer = customer,
+                MembershipTypes = _context.MembershipTypes.ToList()
+            };
+
+            return View("CustomerForm",viewdata);
         }
 
         //private IEnumerable<Customer> GetCustomers()
