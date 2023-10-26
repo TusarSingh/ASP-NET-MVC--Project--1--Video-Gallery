@@ -132,17 +132,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202309141150183_Initial_Model.cs" />
-    <Compile Include="Migrations\202309141150183_Initial_Model.designer.cs">
-      <DependentUpon>202309141150183_Initial_Model.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202309141154074_Customer_Add_IsSubscribedToNewsletter.cs" />
-    <Compile Include="Migrations\202309141154074_Customer_Add_IsSubscribedToNewsletter.designer.cs">
-      <DependentUpon>202309141154074_Customer_Add_IsSubscribedToNewsletter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202309141156545_Customer_Add_FK_MembershipTypeId.cs" />
-    <Compile Include="Migrations\202309141156545_Customer_Add_FK_MembershipTypeId.designer.cs">
-      <DependentUpon>202309141156545_Customer_Add_FK_MembershipTypeId.cs</DependentUpon>
+    <Compile Include="Migrations\202309141219389_PopularMembershipType.cs" />
+    <Compile Include="Migrations\202309141219389_PopularMembershipType.designer.cs">
+      <DependentUpon>202309141219389_PopularMembershipType.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -210,14 +202,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202309141150183_Initial_Model.resx">
-      <DependentUpon>202309141150183_Initial_Model.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202309141154074_Customer_Add_IsSubscribedToNewsletter.resx">
-      <DependentUpon>202309141154074_Customer_Add_IsSubscribedToNewsletter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202309141156545_Customer_Add_FK_MembershipTypeId.resx">
-      <DependentUpon>202309141156545_Customer_Add_FK_MembershipTypeId.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202309141219389_PopularMembershipType.resx">
+      <DependentUpon>202309141219389_PopularMembershipType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
