@@ -132,9 +132,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202309141219389_PopularMembershipType.cs" />
-    <Compile Include="Migrations\202309141219389_PopularMembershipType.designer.cs">
-      <DependentUpon>202309141219389_PopularMembershipType.cs</DependentUpon>
+    <Compile Include="Migrations\202309141237561_Customer_DataAnnotations_Name.cs" />
+    <Compile Include="Migrations\202309141237561_Customer_DataAnnotations_Name.designer.cs">
+      <DependentUpon>202309141237561_Customer_DataAnnotations_Name.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -186,7 +186,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="DataBase_Script\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -202,8 +201,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202309141219389_PopularMembershipType.resx">
-      <DependentUpon>202309141219389_PopularMembershipType.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202309141237561_Customer_DataAnnotations_Name.resx">
+      <DependentUpon>202309141237561_Customer_DataAnnotations_Name.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
