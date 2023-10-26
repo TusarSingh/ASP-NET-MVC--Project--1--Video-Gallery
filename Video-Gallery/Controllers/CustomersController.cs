@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 
 using Vidly.Models;
+using System.Data.Entity;
 
 
 
@@ -13,11 +14,12 @@ namespace Vidly.Controllers
     public class CustomersController : Controller
     {
 
-      
+       
         private DBCS _context;
 
         public CustomersController()
         {
+       
             _context = new DBCS();
         }
 
@@ -34,10 +36,15 @@ namespace Vidly.Controllers
         {
             //var customers = GetCustomers();
 
-            var customers = _context.Customers.ToList();
+            //var customers = _context.Customers.ToList();
+
+            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
 
             return View(customers);
         }
+
+
+        
 
         public ActionResult Details(int id)
         {

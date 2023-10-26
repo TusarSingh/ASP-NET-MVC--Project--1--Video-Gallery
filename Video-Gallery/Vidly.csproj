@@ -133,10 +133,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202309141303058_Customer_Add_Data_.cs" />
-    <Compile Include="Migrations\202309141303058_Customer_Add_Data_.designer.cs">
-      <DependentUpon>202309141303058_Customer_Add_Data_.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DBCS.cs" />
@@ -201,11 +197,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202309141303058_Customer_Add_Data_.resx">
-      <DependentUpon>202309141303058_Customer_Add_Data_.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
