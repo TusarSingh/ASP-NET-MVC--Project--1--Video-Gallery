@@ -127,14 +127,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202309141237561_Customer_DataAnnotations_Name.cs" />
-    <Compile Include="Migrations\202309141237561_Customer_DataAnnotations_Name.designer.cs">
-      <DependentUpon>202309141237561_Customer_DataAnnotations_Name.cs</DependentUpon>
+    <Compile Include="Migrations\202309141303058_Customer_Add_Data_.cs" />
+    <Compile Include="Migrations\202309141303058_Customer_Add_Data_.designer.cs">
+      <DependentUpon>202309141303058_Customer_Add_Data_.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -181,8 +182,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Movies\Random.cshtml" />
-    <Content Include="Views\Movies\Rain.cshtml" />
     <Content Include="Views\Shared\_Navbar.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -201,8 +203,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202309141237561_Customer_DataAnnotations_Name.resx">
-      <DependentUpon>202309141237561_Customer_DataAnnotations_Name.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202309141303058_Customer_Add_Data_.resx">
+      <DependentUpon>202309141303058_Customer_Add_Data_.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
