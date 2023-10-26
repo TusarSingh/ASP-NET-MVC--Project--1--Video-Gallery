@@ -6,85 +6,66 @@ using System.Web.Mvc;
 
 using Vidly.Models;
 using Vidly.ViewModel;
+using System.Data.Entity;
 
 namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
+
+
+        private DBCS _context;
+
+        public MoviesController()
+        {
+            _context = new DBCS();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
+
+
+
         // GET: Movies
         public ActionResult Random()
         {
-            var movie = new Movie() { Name = "Tarun" };
+            //var movies = GetMovies();
 
-            var customers = new List<Customer>
-            {
-                new Customer {Name = "Customer 1"},
-                new Customer {Name = "Customer 2"}
-            };
+            //var movies = _context.Moviess.ToList();
 
-            var viewModel = new RandomMovieViewModel
-            {
-                Movie = movie,
-                Customers = customers
-            };
+            var movies = _context.Movies.ToList();
 
-
-
-
-            return View(viewModel);
-
-            //return Content("Hello MR.");
-
-            //return HttpNotFound();
-
-            //return new EmptyResult();
-
-            //return RedirectToAction("Index","Home",new {page = 1, shortby = "Tarun" });
+            return View(movies);
         }
 
-        public ActionResult Edit(int Id)
+        public ActionResult Details(int id)
         {
-            return Content("ID = " + Id);
+            //var movies = GetMovies().SingleOrDefault(c => c.ID == id);
+
+            var movies = _context.Movies.SingleOrDefault(c => c.ID == id);
+
+            if (movies == null)
+                return HttpNotFound();
+
+            return View(movies);
         }
 
-        public ActionResult Index(int? pId, string pName)
-        {
-
-            if (!pId.HasValue)
-                pId = 1;
-
-            if (string.IsNullOrWhiteSpace(pName))
-                pName = "Tarun";
 
 
-            return Content(string.Format("PageIndex = {0}& sortBy = {1}", pId, pName));
-        }
-
-        //public ActionResult ByReleaseDate(int Year,int Month)
+        //private IEnumerable<Movie> GetMovies()
         //{
-        //    return Content(Year + "/" + Month);
+        //    return new List<Movie>
+        //    {
+        //        new Movie { ID = 1 , Name="Tarun" },
+
+        //        new Movie   { ID=2 , Name="Tusar"}
+
+        //    };
         //}
 
-
-        [Route("movies/released/{Year}/{Month:regex(\\d{4}):range(1,12)}")]
-
-        public ActionResult ByReleaseMonth(int Year, int Month)
-        {
-            return Content(Year + "/" + Month);
-        }
-
-
-
-        public ActionResult Rain()
-        {
-            var mo = new Movie() { Name = "Tusar" };
-
-            ViewData["Yes"] = mo;
-
-            ViewBag.yes = mo;
-
-            return View();
-        }
 
     }
 }

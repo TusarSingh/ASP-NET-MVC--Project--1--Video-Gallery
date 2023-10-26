@@ -11,6 +11,12 @@ namespace Vidly.Models
 
         public string Name { get; set; }
 
-        
+        public string MovieType { get; set; }
+
+        public DateTime ReleasedDate { get; set; }
+
+        public DateTime AddDate { get; set; }
+
+        public int NumberOfStock { get; set; }
     }
 }

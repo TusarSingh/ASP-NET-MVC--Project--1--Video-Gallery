@@ -1,6 +1,4 @@
-﻿@model  Vidly.ViewModel.RandomMovieViewModel
-@*@model Vidly.Models.Movie*@
-
+﻿@model IEnumerable<Vidly.Models.Movie>
 
 
 @{
@@ -10,42 +8,37 @@
 
 <h2>Random</h2>
 
-
-@{ 
-    var className = Model.Customers.Count > 0 ? "popular" : null;
-}
-
-
-
-
-
-
-
-
-<h2 class="@className">@Model.Movie.Name</h2>
-
-<h2>@Model.Customers</h2>
-
-@Model.Customers
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
 
 
 @{
-    if (Model.Customers.Count == 0)
+    if (!Model.Any())
     {
-        <p>No one has rented this movie before.</p>
+    <p>We don't have any Movies yet.'</p>
     }
     else
     {
-        <ul>
-            @foreach (var cus in Model.Customers)
-            {
-                <li>@cus.Name</li>
-            }
-        </ul>
-
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Movie</th>
+                    <th>MovieType</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var movie in Model)
+                {
+                    <tr>
+                        
+                        <td>
+                            @Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.ID },null)
+                        </td>
+                        <td>@movie.MovieType</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     }
-
 }
-
-
-
