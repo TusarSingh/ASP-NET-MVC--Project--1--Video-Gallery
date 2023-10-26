@@ -8,8 +8,21 @@ namespace Vidly
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            //bundles.Add(new ScriptBundle("~/bundles/lib")
+            //    .Include("~/Scripts/jquery-{version}.js")
+            //    .Include("~/Scripts/bootstrap.js")
+            //    .Include("~/Scripts/bootbox.js")
+            //    .Include("~/Scripts/respond.js")
+            //    .Include("~/Scripts/bootstrap.bundle.js")
+            //    .Include("~/scripts/datatables/jquery.datatables.js")
+            //    .Include("~/scripts/datatables/datatables.bootstrap.js")
+            //    );
+
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"
+                        "~/Scripts/jquery-{version}.js",
+                        "~/scripts/datatables/jquery.datatables.js",
+                        "~/scripts/datatables/datatables.bootstrap.js"
                         ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -29,6 +42,7 @@ namespace Vidly
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/content/datatables/css/datatables.bootstrap.css",
                       "~/Content/Site.css"));
         }
     }
