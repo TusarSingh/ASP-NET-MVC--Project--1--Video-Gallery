@@ -53,14 +53,12 @@ namespace Vidly.Controllers
         {
             //var customer = GetCustomers().SingleOrDefault(c => c.ID == id);
 
-            //var customer = _context.Customers.FirstOrDefault(c => c.ID == id);
-
-            var customer = _context.Customers.Include(c => c.MembershipType).FirstOrDefault(c => c.ID == id);
+            var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.ID == id);
 
             if (customer == null)
                 return HttpNotFound();
 
-            return View(customer);
+             return View(customer);
         }
 
         //private IEnumerable<Customer> GetCustomers()

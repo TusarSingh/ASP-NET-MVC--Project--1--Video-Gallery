@@ -20,6 +20,7 @@ namespace Vidly.Models
 
         public byte MembershipTypeId { get; set; }
 
+        [Display(Name = "Date Of Birth")]
         public DateTime BirthOfDate { get; set; }
 
     }
