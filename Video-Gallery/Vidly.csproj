@@ -55,6 +55,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -133,6 +134,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202309141347580_MembershipType_Add_Name.cs" />
+    <Compile Include="Migrations\202309141347580_MembershipType_Add_Name.designer.cs">
+      <DependentUpon>202309141347580_MembershipType_Add_Name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202309141356000_MembershipType_Update_Data.cs" />
+    <Compile Include="Migrations\202309141356000_MembershipType_Update_Data.designer.cs">
+      <DependentUpon>202309141356000_MembershipType_Update_Data.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DBCS.cs" />
@@ -197,6 +206,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202309141347580_MembershipType_Add_Name.resx">
+      <DependentUpon>202309141347580_MembershipType_Add_Name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309141356000_MembershipType_Update_Data.resx">
+      <DependentUpon>202309141356000_MembershipType_Update_Data.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
